@@ -29,6 +29,7 @@ public class Screen extends JFrame {
         this.setContentPane(this.panelMain);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setSize(800, 400);
 
         buttonEdit.setEnabled(false);
@@ -48,7 +49,7 @@ public class Screen extends JFrame {
                     textWeight.setText(String.valueOf(ent.getWeight()));
                     if (entryNumber > 0) {
                         double x = entries.get(entryNumber).getWeight() - entries.get(entryNumber - 1).getWeight();
-                        differential = Math.round((x*100.0))/100.0;
+                        differential = Math.round((x*100.00))/100.00;
                         labelDifferential.setText(String.valueOf(differential)+" kg");
                     }
                     else
